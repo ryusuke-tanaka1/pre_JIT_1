@@ -2,7 +2,7 @@
 <p>Find me in app/views/home/index.html.erb</p>
 <% if user_signed_in? %>
 <%= current_user.name %>
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { "turbo-method": :delete } %>
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { "turbo-method": :delete }, class: "btn btn-primary" %>
 <% else %>
-<%= link_to "ログイン", new_user_session_path %>
+<%= link_to "ログイン", new_user_session_path, class: "btn btn-primary" %>
 <% end %>
