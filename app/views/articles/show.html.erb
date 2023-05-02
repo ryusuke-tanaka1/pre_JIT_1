@@ -1,0 +1,30 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <h1>記事の詳細</h1>
+      <table class="table table-bordered table-condenced">
+        <thead>
+          <tr>
+            <th>タイトル</th>
+            <th>内容</th>
+            <th>画像</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @article.title %></td>
+            <td><%= @article.content %></td>
+            <% if @article.img.present? %>
+              <td><%= image_tag @article.img.url, class: "article-img" %></td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+      <div class="article-buttons">
+        <%= link_to "編集", edit_user_article_path(@user, @article), class: "btn btn-success devise-btn" %>
+        <%= button_to "削除", user_article_path(@user, @article), method: :delete, class: "btn btn-danger devise-btn" %>
+      </div>
+        <%= link_to "記事一覧へ戻る", user_articles_path(@user), class: "btn btn-primary devise-btn" %>
+    </div>
+  </div>
+</div>
