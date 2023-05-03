@@ -40,13 +40,13 @@
         </div>
 
         <div class="actions">
-          <%= f.submit t('devise.registrations.edit.update'), class: "btn btn-primary edit-user-btn" %>
+          <%= f.submit t('devise.registrations.edit.update'), class: "btn btn-primary devise-btn" %>
         </div>
       <% end %>
 
       <h3><%= t('devise.registrations.edit.cancel_my_account') %></h3>
 
-      <div><%= t('devise.registrations.edit.unhappy') %> <%= button_to t('devise.registrations.edit.cancel_my_account'), registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary edit-user-btn" %></div>
+      <div><%= t('devise.registrations.edit.unhappy') %> <%= button_to t('devise.registrations.edit.cancel_my_account'), registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary devise-btn" %></div>
 
       <%= link_to t('devise.shared.links.back'), :back %>
     </div>

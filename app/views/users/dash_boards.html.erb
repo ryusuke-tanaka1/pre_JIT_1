@@ -5,8 +5,9 @@
       <% if user_signed_in? %>
         <h2><%= current_user.name %></h2>
       <% end %>
-      <%= link_to t('devise.registrations.edit.edit'), edit_user_registration_path, class: "btn btn-primary" %><br>
-      <%= link_to t('devise.sessions.new.sign_out'), destroy_user_session_path, html: {method: :delete}, data: { "turbo-method": :delete }, class: "btn btn-warning" %>
+      <%= link_to "記事一覧", user_articles_path(@user), class: "btn btn-primary devise-btn" %><br>
+      <%= link_to t('devise.registrations.edit.edit'), edit_user_registration_path, class: "btn btn-primary devise-btn" %><br>
+      <%= link_to t('devise.sessions.new.sign_out'), destroy_user_session_path, html: {method: :delete}, data: { "turbo-method": :delete }, class: "btn btn-warning devise-btn" %>
     </div>
   </div>
 </div>

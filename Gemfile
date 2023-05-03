@@ -9,6 +9,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'rails-i18n'
 gem 'letter_opener_web'
+gem 'carrierwave'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server

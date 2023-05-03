@@ -1,0 +1,25 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <h1>記事の編集</h1>
+      <div class="text-start">
+        <%= form_with(model: @article, url: user_article_path, local: true) do |f| %>
+          
+            <%= f.label :title, class: "text-start" %>
+            <%= f.text_field :title, class: "form-control" %>
+
+            <%= f.label :content, class: "text-start" %>
+            <%= f.text_area :content, class: "form-control" %>
+            
+            <%= f.label :img, class: "text-start" %>
+            <%= f.file_field :img, class: "form-control" %>
+          
+          <div class="text-center">
+            <%= f.submit "更新する", class: "btn btn-primary devise-btn" %>
+          </div>
+        <% end %>
+        <p><%= link_to "戻る", user_articles_path(@user), class: "text-start" %></p>
+      </div>
+    </div>
+  </div>
+</div>
